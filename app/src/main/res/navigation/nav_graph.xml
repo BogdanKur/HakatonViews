@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/chooseFragment">
+
+    <fragment
+        android:id="@+id/chooseFragment"
+        android:name="com.example.hakatonviews.ChooseFragment"
+        android:label="fragment_choose"
+        tools:layout="@layout/fragment_choose" >
+        <action
+             android:id="@+id/action_chooseFragment_to_directorAuthFragment"
+            app:destination="@id/directorAuthFragment"/>
+        <action
+            android:id="@+id/action_chooseFragment_to_workerAuthFragment"
+            app:destination="@id/workerAuthFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/directorAuthFragment"
+        android:name="com.example.hakatonviews.DirectorAuthFragment"
+        android:label="fragment_director"
+        tools:layout="@layout/fragment_directorauth">
+        <action
+            android:id="@+id/action_directorAuthFragment_to_chooseFragment"
+            app:destination="@id/chooseFragment"/>
+        <action
+            android:id="@+id/action_directorAuthFragment_to_directorRegFragment"
+            app:destination="@id/directorRegFragment" />
+        <action
+            android:id="@+id/action_directorAuthFragment_to_directorFragment"
+            app:destination="@id/directorFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/directorRegFragment"
+        android:name="com.example.hakatonviews.DirectorRegFragment"
+        android:label="fragment_director_reg"
+        tools:layout="@layout/fragment_director_reg">
+        <action
+            android:id="@+id/action_directorRegFragment_to_directorAuthFragment"
+            app:destination="@id/directorAuthFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/directorFragment"
+        android:name="com.example.hakatonviews.DirectorFragment"
+        android:label="fragment_director"
+        tools:layout="@layout/fragment_director"/>
+
+    <fragment
+        android:id="@+id/workerRegFragment"
+        android:name="com.example.hakatonviews.WorkerRegFragment"
+        android:label="fragment_worker_reg"
+        tools:layout="@layout/fragment_worker_reg">
+
+        <action
+            android:id="@+id/action_workerRegFragment_to_workerAuthFragment"
+            app:destination="@id/workerAuthFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/workerAuthFragment"
+        android:name="com.example.hakatonviews.WorkerAuthFragment"
+        android:label="fragment_worker_auth"
+        tools:layout="@layout/fragment_workerauth">
+
+        <action
+            android:id="@+id/action_workerAuthFragment_to_workerRegFragment"
+            app:destination="@id/workerRegFragment" />
+        <action
+            android:id="@+id/action_workerAuthFragment_to_chooseFragment"
+            app:destination="@id/chooseFragment" />
+        <action
+            android:id="@+id/action_workerAuthFragment_to_workerFragment"
+            app:destination="@id/workerFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/workerFragment"
+        android:name="com.example.hakatonviews.WorkerFragment"
+        android:label="fragment_worker_reg"
+        tools:layout="@layout/fragment_worker"/>
+
+
+
+
+
+</navigation>

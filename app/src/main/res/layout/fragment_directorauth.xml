@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".DirectorAuthFragment">
+    <data>
+        <variable
+            name="directorAuthViewModel"
+            type="com.example.hakatonviews.DirectorAuthViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/AuthLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvAuthorization"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etAuthWorkerEmail"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/etHint_authWorkerEmail"
+            android:gravity="center_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:layout_marginTop="10dp"
+            android:background="@color/Grey"
+            android:text="@{directorAuthViewModel.emailAuthEditText}"/>
+
+        <EditText
+            android:id="@+id/etAuthWorkerPassword"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/etHint_authWorkerPassword"
+            android:gravity="center_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etAuthWorkerEmail"
+            android:layout_marginTop="10dp"
+            android:background="@color/Grey"
+            android:text="@{directorAuthViewModel.passwordAuthEditText}"/>
+
+        <Button
+            android:id="@+id/btnAuthWorker"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etAuthWorkerPassword"
+            android:layout_marginTop="10dp"
+            android:text="@string/tvAuthorization"
+            android:background="@color/Peach"/>
+
+        <Button
+            android:id="@+id/btnRegWorker"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAuthWorker"
+            android:layout_marginTop="10dp"
+            android:text="@string/tvRegistration"
+            android:background="@color/Sage"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

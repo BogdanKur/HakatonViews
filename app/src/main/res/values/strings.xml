@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ХакатонViews</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btn_workStart_text">Для сотрудника</string>
+    <string name="btn_dirStart_text">Для руководителя</string>
+    <string name="tvAuthorization">Авторизация</string>
+    <string name="tvRegistration">Регистрация</string>
+    <string name="AuthWorkerMenu">Добро Пожаловать!</string>
+    <string name="etHint_authWorkerEmail">Введите ваш email...</string>
+    <string name="etHint_authWorkerPassword">Введите ваш пароль...</string>
+    <string name="tvWifiTime">Вы подлючены к сети уже:</string>
+</resources>

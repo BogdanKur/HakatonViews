@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".WorkerRegFragment">
+    <data>
+        <variable
+            name="workerRegViewModel"
+            type="com.example.hakatonviews.WorkerRegViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/RegLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvRegistration"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etAuthWorkerEmailReg"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/etHint_authWorkerEmail"
+            android:gravity="center_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:layout_marginTop="10dp"
+            android:background="@color/Grey"
+            android:text="@{workerRegViewModel.emailRegEditText}"/>
+
+        <EditText
+            android:id="@+id/etAuthWorkerPasswordReg"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/etHint_authWorkerPassword"
+            android:gravity="center_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etAuthWorkerEmailReg"
+            android:layout_marginTop="10dp"
+            android:background="@color/Grey"
+            android:text="@{workerRegViewModel.passwordRegEditText}"/>
+
+        <Button
+            android:id="@+id/btnRegWorkerReg"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etAuthWorkerPasswordReg"
+            android:layout_marginTop="10dp"
+            android:text="@string/tvRegistration"
+            android:background="@color/Sage"/>
+
+        <Button
+            android:id="@+id/btnAuthWorkerReg"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnRegWorkerReg"
+            android:layout_marginTop="10dp"
+            android:text="@string/tvAuthorization"
+            android:background="@color/Peach"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
